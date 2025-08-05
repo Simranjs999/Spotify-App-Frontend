@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* Basic styling for the entire application */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure full height for main content */
+html, body, #root {
+  height: 100%;
+}
+
+/* Basic styling for form elements and buttons to match the theme */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #e0e0e0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #1DB954; /* Spotify green on focus */
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.5); /* Green glow on focus */
+}
+
+button {
+  background-color: #1DB954; /* Spotify green */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem; /* Rounded corners */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+button:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #1DB954;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link-button:hover {
+  color: #1ed760;
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #28a745; /* Green for success */
+  color: white;
+}
+
+.message.error {
+  background-color: #dc3545; /* Red for error */
+  color: white;
+}
+
+/* Centering container for forms/pages */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #282828; /* Darker background for cards */
+  padding: 2rem;
+  border-radius: 1rem; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #1DB954; /* Spotify green for headings */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
