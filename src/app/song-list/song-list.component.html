@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Songs</h2>
+  <button (click)="createSong()">Add Song</button>
+  <ul>
+    <li *ngFor="let song of songs">
+      {{ song.title }} by {{ song.artist.name }}
+      <button (click)="viewSong(song.id)">View</button>
+      <button (click)="deleteSong(song.id)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,9 +1,21 @@
-<div class="center-container">
-  <div class="card">
-    <h1>Welcome to your Dashboard!</h1>
-    <p class="text-center text-gray-400 mb-6">You are authenticated and can access this protected page.</p>
-    <div class="text-center">
-      <button (click)="onLogout()">Logout</button>
-    </div>
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h2>Music Ally</h2>
+    <p>Welcome to your dashboard</p>
+  </header>
+
+  <div class="dashboard-actions">
+    <a routerLink="/artists" class="action-card">
+      <h3>Manage Artists</h3>
+      <p>View, create, and edit artist profiles.</p>
+    </a>
+    <a routerLink="/songs" class="action-card">
+      <h3>Manage Songs</h3>
+      <p>Add new songs and manage your music library.</p>
+    </a>
+  </div>
+
+  <div class="logout-section">
+    <button (click)="onLogout()" class="logout-button">Logout</button>
   </div>
 </div>

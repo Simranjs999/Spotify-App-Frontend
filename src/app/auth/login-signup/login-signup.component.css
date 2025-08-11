@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #121212;
+  background-color: #1a1a1a; /* Match global background */
   font-family: 'Circular', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .card {
-  background-color: #121212;
+ background-color: #282828; /* Lighter card background for contrast */
   padding: 3rem 2.5rem;
   border-radius: 8px;
   width: 100%;
@@ -19,10 +19,10 @@
 
 /* Spotify Logo Placeholder */
 .card::before {
-  content: "♪";
+  content: "Music Ally"; /* Display App Name */
   display: block;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem; /* Adjusted font size for text */
   color: #1DB954;
   margin-bottom: 2rem;
   font-weight: bold;

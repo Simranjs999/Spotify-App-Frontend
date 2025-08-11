@@ -1,0 +1,35 @@
+<div class="list-container">
+  <header class="list-header">
+    <h2>Manage Artists</h2>
+    <button class="btn btn-primary" (click)="createArtist()">
+      <i class="fas fa-plus"></i> Add New Artist
+    </button>
+  </header>
+
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Artist Name</th>
+          <th class="actions-column">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let artist of artists">
+          <td>{{ artist.name }}</td>
+          <td class="actions-column">
+            <button class="btn btn-secondary" (click)="viewArtist(artist.id)">
+              <i class="fas fa-eye"></i> View / Edit
+            </button>
+            <button class="btn btn-danger" (click)="deleteArtist(artist.id)">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="!artists || artists.length === 0">
+          <td colspan="2" class="no-data-cell">No artists found. Add one to get started!</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

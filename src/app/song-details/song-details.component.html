@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>{{ songId ? 'Edit Song' : 'Create Song' }}</h2>
+  <form [formGroup]="songForm" (ngSubmit)="saveSong()">
+    <div>
+      <label>Title:</label>
+      <input formControlName="title" required />
+    </div>
+    <div>
+      <label>Duration (seconds):</label>
+      <input formControlName="duration" type="number" required />
+    </div>
+    <div>
+      <label>Artist:</label>
+      <select formControlName="artistId" required>
+        <option value="">Select an artist</option>
+        <option *ngFor="let artist of artists" [value]="artist.id">{{ artist.name }}</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="!songForm.valid">Save</button>
+  </form>
+</div>

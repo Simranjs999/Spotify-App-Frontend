@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.list-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.list-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #1DB954;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #282828;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.data-table thead {
+  background-color: #333333;
+}
+
+.data-table th {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+.data-table tbody tr:hover {
+  background-color: #333333;
+}
+
+.actions-column {
+  text-align: right;
+  width: 300px; /* Adjust width as needed */
+}
+
+.actions-column .btn {
+  margin-left: 0.5rem;
+}
+
+.no-data-cell {
+  text-align: center;
+  padding: 3rem;
+  color: #b3b3b3;
+  font-style: italic;
+}
+
+/* General Button Styles */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 500px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #1DB954;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #e53e3e;
+  color: #ffffff;
+}

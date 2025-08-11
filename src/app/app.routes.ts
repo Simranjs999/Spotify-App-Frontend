@@ -2,15 +2,20 @@ import { Routes } from '@angular/router';
 import { LoginSignupComponent } from './auth/login-signup/login-signup.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { AuthGuard } from './auth/auth.guard';
+import { ArtistListComponent } from './artist-list/artist-list.component';
+import { ArtistDetailsComponent } from './artist-details/artist-details.component';
+import { SongListComponent } from './song-list/song-list.component';
+import { SongDetailsComponent } from './song-details/song-details.component';
 
 export const routes: Routes = [
-    // Default route redirects to the login/signup page
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
-    // Route for login/signup
-    { path: 'login', component: LoginSignupComponent },
-    // Protected route for the dashboard.
-    // The 'canActivate' guard ensures only authenticated users can access this route.
+    { path: 'login-signup', component: LoginSignupComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-    // Wildcard route for any other unknown paths, redirects to login
-    { path: '**', redirectTo: 'login' }
+    { path: 'artists', component: ArtistListComponent, canActivate: [AuthGuard] },
+    { path: 'artists/create', component: ArtistDetailsComponent, canActivate: [AuthGuard] },
+    { path: 'artists/:id', component: ArtistDetailsComponent, canActivate: [AuthGuard] },
+    { path: 'songs', component: SongListComponent, canActivate: [AuthGuard] },
+    { path: 'songs/create', component: SongDetailsComponent, canActivate: [AuthGuard] },
+    { path: 'songs/:id', component: SongDetailsComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: '/login-signup', pathMatch: 'full' },
+    { path: '**', redirectTo: '/login-signup' }
 ];
